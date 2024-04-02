@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MangaViewer
-//
-//  Created by Timmy Tram on 4/2/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
