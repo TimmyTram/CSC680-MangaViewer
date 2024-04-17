@@ -1,19 +1,15 @@
-//
-//  ContentView.swift
-//  GameSales
-//
-//  Created by Timmy Tram on 4/16/24.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    
+    
+    //let gamerPowerService = GamerPowerService()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("Click me") {
+                fetchSales()
+            }
         }
         .padding()
     }
