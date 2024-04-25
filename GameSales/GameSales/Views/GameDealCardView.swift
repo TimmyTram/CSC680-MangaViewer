@@ -9,7 +9,8 @@ struct GameDealCardView: View {
             Text(deal.title)
             Text(deal.published_date)
         }
-        .frame(width: 250, height: 400)
-        .background(.red)
+        .frame(width: 300, height: 600)
+        .background(Color(hex: "514bed"))
+        .clipShape(RoundedRectangle(cornerRadius: 50))
     }
 }

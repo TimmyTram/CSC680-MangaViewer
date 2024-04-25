@@ -9,6 +9,10 @@ struct ListDealView: View {
             ForEach(deals, id: \.id) { deal in
                 GameDealCardView(deal: deal)
             }
+            .listRowSeparator(.hidden)
         }
+        .scrollContentBackground(.hidden)
+        
+        
     }
 }

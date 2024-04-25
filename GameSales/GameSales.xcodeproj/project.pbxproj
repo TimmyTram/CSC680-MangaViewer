@@ -15,6 +15,7 @@
 		061908002BCF63CF00F2087E /* GameDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061907FF2BCF63CF00F2087E /* GameDeal.swift */; };
 		0694DA782BDAC244006DABC3 /* GameDealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694DA772BDAC244006DABC3 /* GameDealCardView.swift */; };
 		0694DA7A2BDAC6B7006DABC3 /* ListDealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694DA792BDAC6B7006DABC3 /* ListDealView.swift */; };
+		0694DA7D2BDACD52006DABC3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694DA7C2BDACD52006DABC3 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		061907FF2BCF63CF00F2087E /* GameDeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDeal.swift; sourceTree = "<group>"; };
 		0694DA772BDAC244006DABC3 /* GameDealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDealCardView.swift; sourceTree = "<group>"; };
 		0694DA792BDAC6B7006DABC3 /* ListDealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDealView.swift; sourceTree = "<group>"; };
+		0694DA7C2BDACD52006DABC3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		060BE1712BCF570C00A912CC /* GameSales */ = {
 			isa = PBXGroup;
 			children = (
+				0694DA7B2BDACD43006DABC3 /* utils */,
 				0694DA722BDAB4EA006DABC3 /* Views */,
 				061907FC2BCF635600F2087E /* Models */,
 				061907FB2BCF619600F2087E /* Services */,
@@ -101,6 +104,14 @@
 				0694DA792BDAC6B7006DABC3 /* ListDealView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		0694DA7B2BDACD43006DABC3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				0694DA7C2BDACD52006DABC3 /* Color.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			files = (
 				060BE1752BCF570C00A912CC /* ContentView.swift in Sources */,
 				061908002BCF63CF00F2087E /* GameDeal.swift in Sources */,
+				0694DA7D2BDACD52006DABC3 /* Color.swift in Sources */,
 				060BE1732BCF570C00A912CC /* GameSalesApp.swift in Sources */,
 				0694DA782BDAC244006DABC3 /* GameDealCardView.swift in Sources */,
 				0694DA7A2BDAC6B7006DABC3 /* ListDealView.swift in Sources */,
