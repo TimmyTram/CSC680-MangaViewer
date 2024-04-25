@@ -55,6 +55,7 @@
 		060BE1712BCF570C00A912CC /* GameSales */ = {
 			isa = PBXGroup;
 			children = (
+				0694DA722BDAB4EA006DABC3 /* Views */,
 				061907FC2BCF635600F2087E /* Models */,
 				061907FB2BCF619600F2087E /* Services */,
 				060BE1722BCF570C00A912CC /* GameSalesApp.swift */,
@@ -87,6 +88,13 @@
 				061907FF2BCF63CF00F2087E /* GameDeal.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0694DA722BDAB4EA006DABC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
