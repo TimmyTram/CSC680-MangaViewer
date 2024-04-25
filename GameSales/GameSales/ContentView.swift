@@ -1,40 +1,47 @@
 import SwiftUI
 
 
-enum RequestResult {
+enum Loadable<T> {
+    case loading
     case failure(Error)
-    case success([GameDeal])
+    case success(T)
 }
 
 struct ContentView: View {
     
-    
     let gamerPowerService: GamerPowerServiceProtocol = GamerPowerService()
     
     @State
-    var output = "Empty"
+    var screenState: Loadable<[GameDeal]> = .loading
     
     
     var body: some View {
         VStack {
-            Button("Click me") {
-                gamerPowerService.fetchSales(callback: { (result: RequestResult) -> Void in
-                    switch result {
-                    case . failure(let error):
-                        output = error.localizedDescription
-                    case .success(let gameDealArr):
-                        let strings: [String] = gameDealArr.map { gameData in gameData.title }
-                        output = strings.joined(separator: ", ")
-                        print(strings)
-                    }
-                    
-                })
+            switch screenState {
+            case .loading:
+                ProgressView()
+            case .failure(let error):
+                Button("Retry") {
+                    screenState = .loading
+                    fetchGames()
+                }
+                Text(error.localizedDescription)
+            case .success(let data):
+                ListDealView(deals: data)
             }
-            Text(output)
         }
-        .padding()
+        .onAppear { fetchGames() }
+    }
+    
+    func fetchGames() {
+        gamerPowerService.fetchSales(callback: { (result: Loadable) -> Void in
+            screenState = result
+        })
     }
 }
+
+
+
 
 #Preview {
     ContentView()
