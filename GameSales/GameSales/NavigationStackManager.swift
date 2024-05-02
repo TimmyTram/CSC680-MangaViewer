@@ -6,6 +6,9 @@ enum Routes {
     case details
 }
 
+
+// https://www.youtube.com/watch?v=j7l48K7fjz4
+// Credits to this person for breaking down nav stack easily for me
 struct NavigationStackManager: View {
     
     @State private var paths = [Routes]()
