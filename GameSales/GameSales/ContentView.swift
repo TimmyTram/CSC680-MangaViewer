@@ -10,6 +10,7 @@ enum Loadable<T> {
 struct ContentView: View {
     
     let gamerPowerService: GamerPowerServiceProtocol = GamerPowerService()
+    let mockGamerPowerService: GamerPowerServiceProtocol = MockGamerPowerService()
     
     @State
     var screenState: Loadable<[GameDeal]> = .loading
@@ -23,14 +24,14 @@ struct ContentView: View {
             case .failure(let error):
                 Button("Retry") {
                     screenState = .loading
-                    fetchGames()
+                    fetchMockGames()
                 }
                 Text(error.localizedDescription)
             case .success(let data):
                 ListDealView(deals: data)
             }
         }
-        .onAppear { fetchGames() }
+        .onAppear { fetchMockGames() }
     }
     
     func fetchGames() {
@@ -38,6 +39,13 @@ struct ContentView: View {
             screenState = result
         })
     }
+    
+    func fetchMockGames() {
+        mockGamerPowerService.fetchSales(callback: { (result: Loadable) -> Void in
+                screenState = result
+        })
+    }
+    
 }
 
 
