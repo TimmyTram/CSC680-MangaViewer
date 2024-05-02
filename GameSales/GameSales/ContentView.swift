@@ -24,14 +24,25 @@ struct ContentView: View {
             case .failure(let error):
                 Button("Retry") {
                     screenState = .loading
+                    
+                    // mock service call
                     fetchMockGames()
+                    
+                    // real service call
+                    //fetchGames()
                 }
                 Text(error.localizedDescription)
             case .success(let data):
                 ListDealView(deals: data)
             }
         }
-        .onAppear { fetchMockGames() }
+        .onAppear {
+            // real service
+            //fetchGames()
+            
+            // mock service
+            fetchMockGames()
+        }
     }
     
     func fetchGames() {
@@ -47,9 +58,6 @@ struct ContentView: View {
     }
     
 }
-
-
-
 
 #Preview {
     ContentView()
