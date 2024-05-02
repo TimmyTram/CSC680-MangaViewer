@@ -2,6 +2,8 @@ import SwiftUI
 
 struct GameDealCardView: View {
     
+    @Binding
+    var paths: [Routes]
     let deal: GameDeal
     let dateFormatter = DateFormatter()
     let frameWidth: CGFloat = 370
@@ -50,8 +52,9 @@ struct GameDealCardView: View {
                 .padding(.vertical, 2)
             
             Button("See More Details") {
-                
+                paths.append(.details)
             }
+            .frame(width: 150, height: 20)
             .padding(.vertical, 2)
             .padding(.horizontal)
             .fontWeight(.bold)
@@ -60,7 +63,6 @@ struct GameDealCardView: View {
                     .stroke(lineWidth: 2)
                     .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             }
-            
             
         }
         .frame(width: frameWidth, height: frameHeight)
@@ -81,7 +83,7 @@ let mockPreviewDeal = GameDeal(id: 2837, title: "Orcs Must Die! 3 (Epic Games) G
 
 struct GameDealCardView_Previews: PreviewProvider {
     static var previews: some View {
-        GameDealCardView(deal: mockPreviewDeal)
+        GameDealCardView(paths: .constant([]), deal: mockPreviewDeal)
             .previewLayout(.sizeThatFits)
     }
 }

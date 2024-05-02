@@ -1,7 +1,7 @@
 import Foundation
 
 
-struct GameDeal: Codable {
+struct GameDeal: Codable, Hashable {
     let id: Int
     let title: String
     let worth: String

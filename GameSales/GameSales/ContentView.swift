@@ -9,6 +9,9 @@ enum Loadable<T> {
 
 struct ContentView: View {
     
+    @Binding
+    var paths: [Routes]
+    
     let gamerPowerService: GamerPowerServiceProtocol = GamerPowerService()
     let mockGamerPowerService: GamerPowerServiceProtocol = MockGamerPowerService()
     
@@ -33,7 +36,7 @@ struct ContentView: View {
                 }
                 Text(error.localizedDescription)
             case .success(let data):
-                ListDealView(deals: data)
+                ListDealView(paths: $paths, deals: data)
             }
         }
         .onAppear {
@@ -60,5 +63,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(paths: .constant([]))
 }
