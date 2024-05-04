@@ -18,7 +18,7 @@
 		06824DA32BE40BF30031188E /* NavigationStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06824DA22BE40BF30031188E /* NavigationStackManager.swift */; };
 		0694DA782BDAC244006DABC3 /* GameDealCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694DA772BDAC244006DABC3 /* GameDealCardView.swift */; };
 		0694DA7A2BDAC6B7006DABC3 /* ListDealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694DA792BDAC6B7006DABC3 /* ListDealView.swift */; };
-		0694DA7D2BDACD52006DABC3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0694DA7C2BDACD52006DABC3 /* Color.swift */; };
+		069ECCB32BE690AC00A5C92F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069ECCB22BE690AC00A5C92F /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		06824DA22BE40BF30031188E /* NavigationStackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackManager.swift; sourceTree = "<group>"; };
 		0694DA772BDAC244006DABC3 /* GameDealCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDealCardView.swift; sourceTree = "<group>"; };
 		0694DA792BDAC6B7006DABC3 /* ListDealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDealView.swift; sourceTree = "<group>"; };
-		0694DA7C2BDACD52006DABC3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		069ECCB22BE690AC00A5C92F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 		0694DA7B2BDACD43006DABC3 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				0694DA7C2BDACD52006DABC3 /* Color.swift */,
+				069ECCB22BE690AC00A5C92F /* Color.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -204,9 +204,9 @@
 				06824DA12BE3FDE50031188E /* GameDealDetailedView.swift in Sources */,
 				060BE1752BCF570C00A912CC /* ContentView.swift in Sources */,
 				061908002BCF63CF00F2087E /* GameDeal.swift in Sources */,
+				069ECCB32BE690AC00A5C92F /* Color.swift in Sources */,
 				06824D9F2BE3E6DD0031188E /* MockGamerPowerService.swift in Sources */,
 				06824DA32BE40BF30031188E /* NavigationStackManager.swift in Sources */,
-				0694DA7D2BDACD52006DABC3 /* Color.swift in Sources */,
 				060BE1732BCF570C00A912CC /* GameSalesApp.swift in Sources */,
 				0694DA782BDAC244006DABC3 /* GameDealCardView.swift in Sources */,
 				0694DA7A2BDAC6B7006DABC3 /* ListDealView.swift in Sources */,

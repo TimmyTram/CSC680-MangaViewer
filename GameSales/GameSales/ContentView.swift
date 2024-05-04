@@ -42,6 +42,8 @@ struct ContentView: View {
                 ListDealView(paths: $paths, gameDeal: $gameDeal, deals: data)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(hex: "2a475e"))
         .onAppear {
             // real service
             //fetchGames()

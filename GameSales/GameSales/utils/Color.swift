@@ -15,3 +15,4 @@ extension Color {
         self.init(red: redValue, green: greenValue, blue: blueValue)
     }
 }
+
