@@ -46,10 +46,10 @@ struct ContentView: View {
         .background(Color(hex: "2a475e"))
         .onAppear {
             // real service
-            //fetchGames()
+            fetchGames()
             
             // mock service
-            fetchMockGames()
+            //fetchMockGames()
         }
     }
     

@@ -106,6 +106,14 @@ struct GameDealDetailedView: View {
                 
                 // Link to giveaway
                 Link("Get Giveaway", destination: URL(string: deal.open_giveaway_url)!)
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 15)
+                    .padding(.vertical, 5)
+                    .background(Capsule()
+                        .strokeBorder(Color.black, lineWidth: 0.8)
+                        .background(Color.blue)
+                        .clipped()
+                    )
                     .clipShape(Capsule())
             }
             .frame(width: (frameWidth + lineWidth), height: (frameHeight * 0.7))
