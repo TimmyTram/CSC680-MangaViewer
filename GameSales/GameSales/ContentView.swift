@@ -12,6 +12,9 @@ struct ContentView: View {
     @Binding
     var paths: [Routes]
     
+    @Binding
+    var gameDeal: GameDeal
+    
     let gamerPowerService: GamerPowerServiceProtocol = GamerPowerService()
     let mockGamerPowerService: GamerPowerServiceProtocol = MockGamerPowerService()
     
@@ -36,7 +39,7 @@ struct ContentView: View {
                 }
                 Text(error.localizedDescription)
             case .success(let data):
-                ListDealView(paths: $paths, deals: data)
+                ListDealView(paths: $paths, gameDeal: $gameDeal, deals: data)
             }
         }
         .onAppear {
@@ -62,6 +65,7 @@ struct ContentView: View {
     
 }
 
-#Preview {
-    ContentView(paths: .constant([]))
-}
+//
+//#Preview {
+//    ContentView(paths: .constant([]))
+//}
