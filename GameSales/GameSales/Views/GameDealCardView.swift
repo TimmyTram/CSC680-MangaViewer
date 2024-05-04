@@ -54,15 +54,9 @@ struct GameDealCardView: View {
             Button("See More Details") {
                 paths.append(.details)
             }
-            .frame(width: 150, height: 20)
-            .padding(.vertical, 2)
-            .padding(.horizontal)
-            .fontWeight(.bold)
-            .overlay {
-                Capsule()
-                    .stroke(lineWidth: 2)
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-            }
+            .buttonStyle(.borderedProminent)
+            .controlSize(.large)
+
             
         }
         .frame(width: frameWidth, height: frameHeight)
