@@ -17,4 +17,5 @@ struct GameDeal: Codable, Hashable {
     let status: String
     let gamerpower_url: String
     let open_giveaway: String
+    let type: String
 }
