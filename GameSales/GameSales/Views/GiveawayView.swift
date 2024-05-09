@@ -1,12 +1,5 @@
 import SwiftUI
 
-
-enum Loadable<T> {
-    case loading
-    case failure(Error)
-    case success(T)
-}
-
 struct GiveawayView: View {
     
     @Binding
@@ -46,10 +39,10 @@ struct GiveawayView: View {
         .background(Color(hex: "2a475e"))
         .onAppear {
             // real service
-            fetchGames()
+            //fetchGames()
             
             // mock service
-            //fetchMockGames()
+            fetchMockGames()
         }
     }
     
