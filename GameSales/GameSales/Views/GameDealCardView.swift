@@ -13,6 +13,7 @@ struct GameDealCardView: View {
     let frameWidth: CGFloat = 370
     let frameHeight: CGFloat = 500
     let frameRadius: CGFloat = 50
+    let lineWidth: CGFloat = 10
     
     var body: some View {
         VStack {
@@ -69,9 +70,9 @@ struct GameDealCardView: View {
             
             
         }
-        .frame(width: frameWidth, height: frameHeight)
+        .frame(width: frameWidth - (lineWidth * 2), height: frameHeight)
         .background(Color(hex: "1b2838"))
-        .clipShape(RoundedRectangle(cornerRadius: frameRadius))
+        .clipShape(RoundedRectangle(cornerRadius: frameRadius, style:.continuous))
     }
     
     func truncateString(_ sourceString: String) -> String {

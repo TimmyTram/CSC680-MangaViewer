@@ -14,12 +14,14 @@ struct GameDealDetailedView: View {
         List() {
             // title
             Text(deal.title)
-                .frame(width: (frameWidth + lineWidth), height: 50)
+                .frame(width: (frameWidth - (lineWidth * 2)), height: 50)
                 .background(Color(hex: "66c0f4"))
                 .foregroundStyle(.white)
                 .fontWeight(.bold)
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color(hex: "2a475e"))
+                .clipShape(RoundedRectangle(cornerRadius: frameRadius, style: .continuous))
+                
             
             // image
             ZStack {
@@ -58,10 +60,11 @@ struct GameDealDetailedView: View {
                     .foregroundStyle(.white)
                     .padding(5)
             }
-            .frame(width: (frameWidth + lineWidth), height: (frameHeight * 0.3))
+            .frame(width: (frameWidth - (lineWidth * 2)), height: (frameHeight * 0.3))
             .background(Color(hex: "1b2838"))
             .listRowSeparator(.hidden)
             .listRowBackground(Color(hex: "2a475e"))
+            .clipShape(RoundedRectangle(cornerRadius: frameRadius, style: .continuous))
             
             // Date
             VStack {
@@ -75,10 +78,11 @@ struct GameDealDetailedView: View {
                     .foregroundStyle(.white)
                     .padding(5)
             }
-            .frame(width: (frameWidth + lineWidth), height: (frameHeight * 0.3))
+            .frame(width: (frameWidth - (lineWidth * 2)), height: (frameHeight * 0.3))
             .background(Color(hex: "1b2838"))
             .listRowSeparator(.hidden)
             .listRowBackground(Color(hex: "2a475e"))
+            .clipShape(RoundedRectangle(cornerRadius: frameRadius, style: .continuous))
             
             // description
             VStack {
@@ -89,10 +93,11 @@ struct GameDealDetailedView: View {
                     .foregroundStyle(.white)
                     .padding(20)
             }
-            .frame(width: (frameWidth + lineWidth), height: (frameHeight * 0.7))
+            .frame(width: (frameWidth - (lineWidth * 2)), height: (frameHeight * 0.7))
             .background(Color(hex: "1b2838"))
             .listRowSeparator(.hidden)
             .listRowBackground(Color(hex: "2a475e"))
+            .clipShape(RoundedRectangle(cornerRadius: frameRadius, style: .continuous))
             
             
             // instructions
@@ -116,10 +121,11 @@ struct GameDealDetailedView: View {
                     )
                     .clipShape(Capsule())
             }
-            .frame(width: (frameWidth + lineWidth), height: (frameHeight * 0.7))
+            .frame(width: (frameWidth - (lineWidth * 2)), height: (frameHeight * 0.7))
             .background(Color(hex: "1b2838"))
             .listRowSeparator(.hidden)
             .listRowBackground(Color(hex: "2a475e"))
+            .clipShape(RoundedRectangle(cornerRadius: frameRadius, style: .continuous))
             
             
         }
