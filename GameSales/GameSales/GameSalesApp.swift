@@ -4,7 +4,6 @@ import SwiftUI
 struct GameSalesApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
             NavigationStackManager()
         }
     }

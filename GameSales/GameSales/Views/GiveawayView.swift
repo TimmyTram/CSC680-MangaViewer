@@ -7,7 +7,7 @@ enum Loadable<T> {
     case success(T)
 }
 
-struct ContentView: View {
+struct GiveawayView: View {
     
     @Binding
     var paths: [Routes]
@@ -46,10 +46,10 @@ struct ContentView: View {
         .background(Color(hex: "2a475e"))
         .onAppear {
             // real service
-            //fetchGames()
+            fetchGames()
             
             // mock service
-            fetchMockGames()
+            //fetchMockGames()
         }
     }
     

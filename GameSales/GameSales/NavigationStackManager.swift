@@ -18,10 +18,10 @@ struct NavigationStackManager: View {
     
     var body: some View {
         NavigationStack(path: $paths) {
-            ContentView(paths: $paths, gameDeal: $gameDeal).navigationDestination(for: Routes.self) { route in
+            GiveawayView(paths: $paths, gameDeal: $gameDeal).navigationDestination(for: Routes.self) { route in
                 switch(route) {
                 case .list:
-                    ContentView(paths: $paths, gameDeal: $gameDeal)
+                    GiveawayView(paths: $paths, gameDeal: $gameDeal)
                 case .details:
                     GameDealDetailedView(deal: $gameDeal)
                 }
