@@ -22,14 +22,21 @@ struct ListDealView: View {
     
     var body: some View {
         VStack {
-            TextField("", text: $searchTerm, prompt: Text("Search Deals").foregroundColor(.white))
-                .frame(width: 370, height: 50)
-                .foregroundColor(.white)
-                .disableAutocorrection(true)
-                .background(Color(hex: "66c0f4"))
-                .cornerRadius(15)
-                .padding()
+            // custom search bar
+            ZStack {
+                // background color of search bar
+                RoundedRectangle(cornerRadius: 50)
+                    .fill(Color(hex: "66c0f4"))
+                    .frame(width: 370, height: 50)
+                
+                // make prompt text white
+                TextField("", text: $searchTerm, prompt: Text("Search Deals").foregroundColor(.white))
+                    .frame(width: 320, height: 50)
+                    .foregroundColor(.white) // makes the typed text white
+                    .disableAutocorrection(true)
+            }
             
+            // list of all game deals
             List {
                 ForEach(filteredDeals, id: \.id) { deal in
                     GameDealCardView(paths: $paths, gameDeal: $gameDeal, deal: deal)
