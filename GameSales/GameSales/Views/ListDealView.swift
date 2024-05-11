@@ -8,18 +8,38 @@ struct ListDealView: View {
     @Binding
     var gameDeal: GameDeal
     
-    let deals: [GameDeal]
+    @State
+    var deals: [GameDeal]
+    
+    @State
+    private var searchTerm = ""
+    
+    var filteredDeals: [GameDeal] {
+        guard !searchTerm.isEmpty else { return deals}
+        return deals.filter { $0.title.localizedCaseInsensitiveContains(searchTerm) }
+    }
+    
     
     var body: some View {
-        List {
-            ForEach(deals, id: \.id) { deal in
-                GameDealCardView(paths: $paths, gameDeal: $gameDeal, deal: deal)
-                    .listRowBackground(Color(hex: "2a475e"))
+        VStack {
+            TextField("", text: $searchTerm, prompt: Text("Search Deals").foregroundColor(.white))
+                .frame(width: 370, height: 50)
+                .foregroundColor(.white)
+                .disableAutocorrection(true)
+                .background(Color(hex: "66c0f4"))
+                .cornerRadius(15)
+                .padding()
+            
+            List {
+                ForEach(filteredDeals, id: \.id) { deal in
+                    GameDealCardView(paths: $paths, gameDeal: $gameDeal, deal: deal)
+                        .listRowBackground(Color(hex: "2a475e"))
+                }
+                .listRowSeparator(.hidden)
             }
-            .listRowSeparator(.hidden)
+            .scrollContentBackground(.hidden)
         }
         .background(Color(hex: "2a475e"))
-        .scrollContentBackground(.hidden)
     }
 }
 

@@ -25,10 +25,10 @@ struct GiveawayView: View {
                     screenState = .loading
                     
                     // mock service call
-                    fetchMockGames()
+                    //fetchMockGames()
                     
                     // real service call
-                    //fetchGames()
+                    fetchGames()
                 }
                 Text(error.localizedDescription)
             case .success(let data):
@@ -39,10 +39,10 @@ struct GiveawayView: View {
         .background(Color(hex: "2a475e"))
         .onAppear {
             // real service
-            //fetchGames()
+            fetchGames()
             
             // mock service
-            fetchMockGames()
+            //fetchMockGames()
         }
     }
     
