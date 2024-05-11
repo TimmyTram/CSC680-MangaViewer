@@ -84,6 +84,8 @@ struct GameDealCardView: View {
     
 }
 
+//https://stackoverflow.com/questions/76468134/how-to-create-a-swiftui-preview-in-xcode-15-for-a-view-with-a-binding
+// need this for preview while editing UI
 #Preview {
     struct PreviewWrapper: View {
         @State var paths: [Routes] = [Routes]()
