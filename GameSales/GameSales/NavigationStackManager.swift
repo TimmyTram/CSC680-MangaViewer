@@ -23,7 +23,7 @@ struct NavigationStackManager: View {
                 case .list:
                     GiveawayView(paths: $paths, gameDeal: $gameDeal)
                 case .details:
-                    GameDealDetailedView(deal: $gameDeal)
+                    GameDealDetailedView(paths: $paths, deal: $gameDeal).navigationBarBackButtonHidden(true)
                 }
             }
         }
