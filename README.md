@@ -31,3 +31,6 @@ Game Sales is an iOS app designed to connect to the gamerpower API and display a
 - Custom colors using hexcodes instead of default swift colors
 - Modernized views fitting a certain color palette theme
 - A Mock service call to the API
+
+# Demo
+https://youtu.be/c7sRQ6h3ndA
